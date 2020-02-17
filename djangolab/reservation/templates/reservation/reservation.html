@@ -1,0 +1,83 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="UTF-8">
+        <title>Bookingpage</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{% static 'GaugeMeter.js' %}"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://fullcalendar.io/js/fullcalendar-2.3.1/lang-all.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css">
+        <div class="banner">
+          <section>
+           <h1>Reservation<span class="btn-bgstroke">Kasidit Tipayawatn</span></h1>
+          </section>
+         </div>
+    </head>
+    <body>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="GaugeMeter" data-percent="100" data-label="Credits" data-used="30" data-total="50" data-size="200" data-width="10" data-style="Arch" data-theme="Red-Gold-Green"> </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="box-part">
+                  <div class="row">  
+                    <div class="col-lg-4" style="text-align: left; margin-left: 70px;">
+                    <input type="radio" id="inlineRadio1" value="1" name="bn">
+                    <label for="inlineRadio1">Individual</label>
+                    </div>
+                    <div class="col-lg-4" style="text-align: left; margin-left: 70px;">
+                    <input type="radio" id="inlineRadio2" value="0" name="bn">
+                    <label for="inlineRadio2">Group</label>
+                    </div>
+                  </div>     
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-10">
+                <img src="{% static 'buildings.png'%}" class="img-fluid">
+              </div>
+          </div>
+          <div id="reserveModal">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Please Choose your reservation timetable</h4>
+                </div>
+              <div class="modal-body" style="text-align:center;">
+                <div id="calendar"> 
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="newBtn" class="btn btn-sm btn-info" name="submitbtn">Submit Schedule</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </body>
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'calendar.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+    <script src="https://fullcalendar.io/js/fullcalendar-2.3.1/lang-all.js"></script>
+</html>
