@@ -9,6 +9,5 @@ class Reservation(models.Model):
 
     #add in  later
 
-    def __str__(self):
-        return self.title
+  
 
